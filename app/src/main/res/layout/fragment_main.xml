@@ -1,0 +1,102 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="communicator"
+            type="com.anokmik.databinding.communicator.MainFragmentCommunicator" />
+
+        <variable
+            name="titles"
+            type="String[]" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="@dimen/layout_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/find_view_by_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{communicator.clickListener}"
+                android:text="@{titles[0]}"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/butter_knife"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{communicator.clickListener}"
+                android:text="@{titles[1]}"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/data_binding_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{communicator.clickListener}"
+                android:text="@{titles[2]}"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/data_binding_ids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{communicator.clickListener}"
+                android:text="@{titles[3]}"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{communicator.clickListener}"
+                android:text="@{titles[4]}"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/observable_greeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{communicator.clickListener}"
+                android:text="@{titles[5]}"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/notify_greeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{communicator.clickListener}"
+                android:text="@{titles[6]}"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{communicator.clickListener}"
+                android:text="@{titles[7]}"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/customization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{communicator.clickListener}"
+                android:text="@{titles[8]}"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

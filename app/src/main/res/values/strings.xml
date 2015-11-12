@@ -1,0 +1,58 @@
+<resources>
+
+    <string name="app_name">Data Binding</string>
+
+    <string name="button_find_view_by_id">findViewById</string>
+    <string name="button_butter_knife">ButterKnife</string>
+    <string name="button_data_binding_model">Binding Model</string>
+    <string name="button_data_binding_ids">Binding Ids</string>
+    <string name="button_login">Login</string>
+    <string name="button_observable_greeting">Observable Greeting</string>
+    <string name="button_notify_greeting">Notify Greeting</string>
+    <string name="button_notes">Notes</string>
+    <string name="button_customization">Customization</string>
+    <string name="button_sign_in">Sign In</string>
+
+    <string name="hint_login">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">First Name</string>
+
+    <string name="greeting_sign_in">%s signed in successfully!</string>
+    <string name="greeting_format">Hello, %s!</string>
+
+    <string name="notes_category_interesting">Interesting</string>
+    <string name="notes_category_common">Common</string>
+    <string name="notes_category_easy_to_use">Easy to Use</string>
+
+    <string name="note_number_one">Note number one</string>
+    <string name="note_number_two">Note number two</string>
+    <string name="note_number_three">Note number three</string>
+    <string name="note_number_four">Note number four</string>
+    <string name="note_number_five">Note number five</string>
+    <string name="note_number_six">Note number six</string>
+    <string name="note_number_seven">Note number seven</string>
+    <string name="note_number_eight">Note number eight</string>
+    <string name="note_number_nine">Note number nine</string>
+    <string name="note_number_ten">Note number ten</string>
+    <string name="note_number_eleven">Too many notes</string>
+    <string name="note_number_twelve">Note number twelve</string>
+    <string name="note_number_thirteen">Note number thirteen</string>
+    <string name="note_number_fourteen">Note number fourteen</string>
+    <string name="note_number_fifteen">Note number fifteen</string>
+    <string name="note_number_sixteen">Note number sixteen</string>
+    <string name="note_number_seventeen">Note number seventeen</string>
+    <string name="note_number_eighteen">Note number eighteen</string>
+    <string name="note_number_nineteen">Note number nineteen</string>
+    <string name="note_number_twenty">Will there be an end to this notes?</string>
+    <string name="note_number_twenty_one">Note number twenty one</string>
+    <string name="note_number_twenty_two">Note number twenty two</string>
+    <string name="note_number_twenty_three">Note number twenty three</string>
+    <string name="note_number_twenty_four">Note number twenty four</string>
+    <string name="note_number_twenty_five">Note number twenty five</string>
+
+    <string name="customization_one">I am a TextView number one</string>
+    <string name="customization_two">Me, TextView too</string>
+    <string name="customization_three">Third TextView goes here</string>
+    <string name="customization_another_color">Maybe another color?</string>
+
+</resources>

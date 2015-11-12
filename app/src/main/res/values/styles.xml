@@ -1,0 +1,24 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:listChoiceBackgroundIndicator">?listChoiceBackgroundIndicator</item>
+        <item name="android:selectableItemBackground">?selectableItemBackground</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionModeBackground">@color/colorPrimary</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+
+    <style name="PopupTheme" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

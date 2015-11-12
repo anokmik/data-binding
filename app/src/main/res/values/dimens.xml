@@ -1,0 +1,8 @@
+<resources>
+
+    <dimen name="layout_padding">16dp</dimen>
+    <dimen name="layout_list_divider">2dp</dimen>
+
+    <dimen name="card_elevation">2.0dp</dimen>
+
+</resources>
