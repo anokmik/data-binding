@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 
 import com.anokmik.databinding.R;
 import com.anokmik.databinding.databinding.ActivityMainBinding;
@@ -25,9 +24,11 @@ public class MainActivity extends AppCompatActivity implements OnFragmentEventLi
 
         containerId = binding.container.getId();
 
-        getSupportFragmentManager().beginTransaction()
-                .add(containerId, new MainFragment(), null)
-                .commit();
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(containerId, new MainFragment(), null)
+                    .commit();
+        }
     }
 
     @Override

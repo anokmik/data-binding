@@ -4,6 +4,7 @@ import com.anokmik.databinding.model.ObservableGreeting;
 
 public class ObservableGreetingFragmentCommunicator {
 
-    public ObservableGreeting observableGreeting = new ObservableGreeting();
+    @JvmField
+    val observableGreeting: ObservableGreeting = ObservableGreeting()
 
 }
