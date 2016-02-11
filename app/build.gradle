@@ -58,6 +58,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.android.support:cardview-v7:23.1.1'
-    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.0-beta-3595'
+    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.0-rc-1036'
     compile 'com.jakewharton:butterknife:7.0.1'
 }
