@@ -2,9 +2,11 @@
 
     <data>
 
+        <import type="com.anokmik.databinding.model.User" />
+
         <variable
             name="user"
-            type="com.anokmik.databinding.model.User" />
+            type="User" />
 
     </data>
 

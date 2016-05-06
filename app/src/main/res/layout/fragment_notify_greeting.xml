@@ -1,13 +1,15 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+<!--suppress AndroidUnknownAttribute -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
         <import type="android.view.View" />
 
+        <import type="com.anokmik.databinding.communicator.NotifyGreetingFragmentCommunicator" />
+
         <variable
             name="communicator"
-            type="com.anokmik.databinding.communicator.NotifyGreetingFragmentCommunicator" />
+            type="NotifyGreetingFragmentCommunicator" />
 
     </data>
 
@@ -22,7 +24,7 @@
             android:layout_height="match_parent"
             android:hint="@string/hint_name"
             android:inputType="text"
-            bind:textWatcher="@{communicator.nameTextWatcher}" />
+            android:onTextChanged="@{communicator.onGreetingTextChanged}" />
 
         <TextView
             android:layout_width="match_parent"

@@ -4,9 +4,11 @@
 
     <data>
 
+        <import type="com.anokmik.databinding.model.Note" />
+
         <variable
             name="note"
-            type="com.anokmik.databinding.model.Note" />
+            type="Note" />
 
     </data>
 

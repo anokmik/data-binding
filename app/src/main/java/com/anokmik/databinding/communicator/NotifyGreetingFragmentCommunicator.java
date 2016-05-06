@@ -1,21 +1,18 @@
 package com.anokmik.databinding.communicator;
 
-import android.text.Editable;
+import android.databinding.adapters.TextViewBindingAdapter;
 
 import com.anokmik.databinding.model.NotifyGreeting;
-import com.anokmik.databinding.util.SimpleTextWatcher;
 
 public class NotifyGreetingFragmentCommunicator {
 
     public NotifyGreeting notifyGreeting = new NotifyGreeting();
 
-    public SimpleTextWatcher nameTextWatcher = new SimpleTextWatcher() {
-
+    public TextViewBindingAdapter.OnTextChanged onGreetingTextChanged = new TextViewBindingAdapter.OnTextChanged() {
         @Override
-        public void afterTextChanged(Editable s) {
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
             notifyGreeting.setName(s.toString());
         }
-
     };
 
 }

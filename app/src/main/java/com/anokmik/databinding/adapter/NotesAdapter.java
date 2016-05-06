@@ -31,6 +31,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.binding.setNote(notes.get(position));
+        holder.binding.executePendingBindings();
     }
 
     @Override

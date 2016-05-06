@@ -3,9 +3,11 @@
 
     <data>
 
+        <import type="com.anokmik.databinding.communicator.NotesFragmentCommunicator" />
+
         <variable
             name="communicator"
-            type="com.anokmik.databinding.communicator.NotesFragmentCommunicator" />
+            type="NotesFragmentCommunicator" />
 
     </data>
 
