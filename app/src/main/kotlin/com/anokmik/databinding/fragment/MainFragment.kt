@@ -8,11 +8,11 @@ import com.anokmik.databinding.R
 import com.anokmik.databinding.communicator.MainFragmentCommunicator
 import com.anokmik.databinding.databinding.FragmentMainBinding
 import com.anokmik.databinding.listener.OnFragmentEventListener
-import com.anokmik.databinding.util.castObjectOrThrow
+import com.anokmik.databinding.util.castObject
 
 class MainFragment : BaseFragment() {
 
-    private val listener by lazy { castObjectOrThrow<OnFragmentEventListener>(activity) }
+    private val listener by lazy { castObject<OnFragmentEventListener>(activity) }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater?.inflate(R.layout.fragment_main, container, false)

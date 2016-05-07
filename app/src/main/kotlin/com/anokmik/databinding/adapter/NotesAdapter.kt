@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.anokmik.databinding.R
+import com.anokmik.databinding.communicator.NoteItemCommunicator
 import com.anokmik.databinding.databinding.ListNoteItemBinding
 import com.anokmik.databinding.model.Note
 import java.util.*
@@ -19,8 +20,10 @@ class NotesAdapter(val context: Context, val notes: ArrayList<Note>) : RecyclerV
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.note = notes[position]
-        holder.binding.executePendingBindings()
+        holder.binding.apply {
+            communicator = NoteItemCommunicator(notes[position])
+            executePendingBindings()
+        }
     }
 
     override fun getItemCount(): Int {

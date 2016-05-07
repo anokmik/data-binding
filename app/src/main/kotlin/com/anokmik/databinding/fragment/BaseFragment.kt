@@ -12,9 +12,9 @@ abstract class BaseFragment : Fragment() {
 
     private val keyShowBack = "show_back"
 
-    private val title by lazy { arguments.getString(keyTitle) }
+    private val titleValue by lazy { arguments.getString(keyTitle) }
 
-    private val showBack by lazy { arguments.getBoolean(keyShowBack) }
+    private val showBackValue by lazy { arguments.getBoolean(keyShowBack) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,14 +35,18 @@ abstract class BaseFragment : Fragment() {
 
     fun initArguments(title: String, showBack: Boolean = true) {
         arguments = Bundle()
-        arguments.putString(keyTitle, title)
-        arguments.putBoolean(keyShowBack, showBack)
+        arguments.apply {
+            putString(keyTitle, title)
+            putBoolean(keyShowBack, showBack)
+        }
     }
 
     private fun prepareActionBar() {
         val supportActionBar = (activity as AppCompatActivity).supportActionBar
-        supportActionBar?.title = title
-        supportActionBar?.setDisplayHomeAsUpEnabled(showBack)
+        supportActionBar?.apply {
+            title = titleValue
+            setDisplayHomeAsUpEnabled(showBackValue)
+        }
     }
 
 }

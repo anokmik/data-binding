@@ -8,6 +8,8 @@ import com.anokmik.databinding.R
 import com.anokmik.databinding.databinding.ActivityMainBinding
 import com.anokmik.databinding.fragment.MainFragment
 import com.anokmik.databinding.listener.OnFragmentEventListener
+import com.anokmik.databinding.util.add
+import com.anokmik.databinding.util.replace
 
 class MainActivity : AppCompatActivity(), OnFragmentEventListener {
 
@@ -16,11 +18,11 @@ class MainActivity : AppCompatActivity(), OnFragmentEventListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setSupportActionBar(binding.toolbar)
-        supportFragmentManager.beginTransaction().add(binding.container.id, getMainFragment(), null).commit()
+        supportFragmentManager.add(getMainFragment(), binding.container.id)
     }
 
     override fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().replace(binding.container.id, fragment).addToBackStack(null).commit()
+        supportFragmentManager.replace(fragment, binding.container.id)
     }
 
     fun getMainFragment(): MainFragment {
