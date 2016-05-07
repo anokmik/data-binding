@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
-        <import type="com.anokmik.databinding.model.Note" />
+        <import type="com.anokmik.databinding.communicator.NoteItemCommunicator" />
 
         <variable
-            name="note"
-            type="Note" />
+            name="communicator"
+            type="NoteItemCommunicator" />
 
     </data>
 
@@ -16,34 +17,53 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:cardBackgroundColor="@{note.state ? @color/colorPrimary : @color/colorAccent}"
+        app:cardBackgroundColor="@{communicator.note.state ? @color/colorPrimary : @color/colorAccent}"
         app:cardElevation="@dimen/card_elevation"
         app:cardUseCompatPadding="true">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/layout_padding"
-            android:orientation="vertical">
+            android:padding="@dimen/layout_padding">
+
+            <ImageButton
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:onClick="@{() -> communicator.switchState()}"
+                android:src="@{communicator.note.state ? @drawable/ic_star_pink : @drawable/ic_star_purple}"
+                tools:src="@drawable/ic_star_purple" />
 
             <TextView
+                android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="@dimen/layout_list_top_bottom_margin"
+                android:layout_toLeftOf="@id/star"
+                android:layout_toStartOf="@id/star"
+                android:text="@{communicator.note.text}"
+                android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:text="@{note.text}"
-                android:textColor="@android:color/white" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/layout_list_divider" />
+                tools:text="Text" />
 
             <TextView
+                android:id="@+id/category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{note.category}"
-                android:textColor="@android:color/white" />
+                android:layout_below="@+id/text"
+                android:layout_marginTop="@dimen/layout_list_top_bottom_margin"
+                android:layout_toLeftOf="@id/star"
+                android:layout_toStartOf="@id/star"
+                android:text="@{communicator.note.category}"
+                android:textColor="@android:color/white"
+                tools:text="Category" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
