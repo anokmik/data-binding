@@ -66,8 +66,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.3.0'
     compile 'com.android.support:cardview-v7:23.3.0'
     compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.1-2'
-    compile 'com.jakewharton:butterknife:8.0.1'
-    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
     kapt 'com.android.databinding:compiler:2.1.0'
 }
 

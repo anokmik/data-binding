@@ -4,6 +4,6 @@ import android.support.v4.app.Fragment
 
 interface OnFragmentEventListener {
 
-    fun replaceFragment(fragment: Fragment?);
+    fun replaceFragment(fragment: Fragment);
 
 }

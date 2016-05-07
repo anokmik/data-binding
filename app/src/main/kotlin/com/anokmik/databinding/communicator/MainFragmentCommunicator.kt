@@ -16,7 +16,7 @@ class MainFragmentCommunicator(val resources: Resources, val listener: OnFragmen
         val baseFragment = fragmentAndTitle.first;
         val title = fragmentAndTitle.second;
         baseFragment.initArguments(title);
-        listener.replaceFragment(fragmentAndTitle.first);
+        listener.replaceFragment(baseFragment);
     }
 
     private fun getFragmentAndTitle(@IdRes id: Int): Pair<BaseFragment, String> {

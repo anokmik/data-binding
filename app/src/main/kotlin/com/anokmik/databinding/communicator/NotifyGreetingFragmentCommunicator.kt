@@ -9,6 +9,6 @@ class NotifyGreetingFragmentCommunicator {
     val notifyGreeting: NotifyGreeting = NotifyGreeting()
 
     @JvmField
-    val onGreetingTextChanged: TextViewBindingAdapter.OnTextChanged = TextViewBindingAdapter.OnTextChanged { s, start, before, count -> notifyGreeting.name = s.toString() }
+    val onGreetingTextChanged: TextViewBindingAdapter.OnTextChanged = TextViewBindingAdapter.OnTextChanged { s, start, before, count -> notifyGreeting.setName(s.toString()) }
 
 }
