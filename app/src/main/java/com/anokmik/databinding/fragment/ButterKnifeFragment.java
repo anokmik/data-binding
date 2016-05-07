@@ -1,7 +1,7 @@
 package com.anokmik.databinding.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,21 +10,25 @@ import android.widget.TextView;
 import com.anokmik.databinding.R;
 import com.anokmik.databinding.model.User;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
-public class ButterKnifeFragment extends Fragment {
+public class ButterKnifeFragment extends BaseFragment {
 
-    @Bind(R.id.first_name)
+    @BindView(R.id.first_name)
     TextView firstName;
 
-    @Bind(R.id.last_name)
+    @BindView(R.id.last_name)
     TextView lastName;
+
+    @Nullable
+    Unbinder unbinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_simple, container, false);
-        ButterKnife.bind(this, view);
+        unbinder = ButterKnife.bind(this, view);
         return view;
     }
 
@@ -39,7 +43,9 @@ public class ButterKnifeFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+        if (unbinder != null) {
+            unbinder.unbind();
+        }
     }
 
 }

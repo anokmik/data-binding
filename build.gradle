@@ -1,22 +1,30 @@
 buildscript {
+
     repositories {
         jcenter()
         mavenCentral()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.0-rc-1036'
+        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.1-2'
     }
+
 }
 
 repositories {
+
     mavenCentral()
+
 }
 
 allprojects {
+
     repositories {
         jcenter()
     }
+
 }
 
 task clean(type: Delete) {

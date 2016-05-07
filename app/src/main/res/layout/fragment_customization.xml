@@ -1,11 +1,12 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
+        <import type="com.anokmik.databinding.communicator.CustomizationFragmentCommunicator" />
+
         <variable
             name="communicator"
-            type="com.anokmik.databinding.communicator.CustomizationFragmentCommunicator" />
+            type="CustomizationFragmentCommunicator" />
 
     </data>
 
@@ -52,10 +53,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@{communicator.state ? @color/colorPrimary : @color/colorAccent}"
+            android:onClick="@{() -> communicator.switchState()}"
             android:text="@string/customization_another_color"
             android:textAllCaps="false"
-            android:textColor="@{communicator.state ? @color/colorAccent : @color/colorPrimary}"
-            bind:onClickListener="@{communicator.clickListener}" />
+            android:textColor="@{communicator.state ? @color/colorAccent : @color/colorPrimary}" />
 
     </LinearLayout>
 

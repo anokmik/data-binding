@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.anokmik.databinding.R;
-import com.anokmik.databinding.communicator.NoteItemCommunicator;
 import com.anokmik.databinding.databinding.ListNoteItemBinding;
 import com.anokmik.databinding.model.Note;
 
@@ -31,7 +30,8 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.binding.setCommunicator(new NoteItemCommunicator(notes.get(position)));
+        holder.binding.setNote(notes.get(position));
+        holder.binding.executePendingBindings();
     }
 
     @Override

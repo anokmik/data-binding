@@ -1,11 +1,13 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+<!--suppress AndroidUnknownAttribute -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
+        <import type="com.anokmik.databinding.communicator.LoginFragmentCommunicator" />
+
         <variable
             name="communicator"
-            type="com.anokmik.databinding.communicator.LoginFragmentCommunicator" />
+            type="LoginFragmentCommunicator" />
 
     </data>
 
@@ -20,7 +22,8 @@
             android:layout_height="match_parent"
             android:hint="@string/hint_login"
             android:inputType="text"
-            bind:textWatcher="@{communicator.loginTextWatcher}" />
+            android:onTextChanged="@{communicator.onLoginTextChanged}"
+            android:text="@={communicator.loginValue}" />
 
         <EditText
             android:layout_width="match_parent"
@@ -28,14 +31,14 @@
             android:enabled="@{communicator.isLoginValid}"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
-            bind:textWatcher="@{communicator.passwordTextWatcher}" />
+            android:onTextChanged="@{communicator.onPasswordTextChanged}" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:enabled="@{communicator.isLoginValid &amp; communicator.isPasswordValid}"
-            android:text="@string/button_sign_in"
-            bind:onClickListener="@{communicator.clickListener}" />
+            android:onClick="@{() -> communicator.showToast()}"
+            android:text="@string/button_sign_in" />
 
     </LinearLayout>
 

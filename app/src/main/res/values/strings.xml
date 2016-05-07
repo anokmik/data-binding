@@ -2,7 +2,7 @@
 
     <string name="app_name">Data Binding</string>
 
-    <string name="button_find_view_by_id">findViewById</string>
+    <string name="button_find_view_by_id">FindViewById</string>
     <string name="button_butter_knife">ButterKnife</string>
     <string name="button_data_binding_model">Binding Model</string>
     <string name="button_data_binding_ids">Binding Ids</string>

@@ -1,8 +1,7 @@
 package com.anokmik.databinding.communicator;
 
-import android.text.Editable
+import android.databinding.adapters.TextViewBindingAdapter
 import com.anokmik.databinding.model.NotifyGreeting
-import com.anokmik.databinding.util.SimpleTextWatcher
 
 class NotifyGreetingFragmentCommunicator {
 
@@ -10,10 +9,6 @@ class NotifyGreetingFragmentCommunicator {
     val notifyGreeting: NotifyGreeting = NotifyGreeting()
 
     @JvmField
-    val nameTextWatcher: SimpleTextWatcher = object : SimpleTextWatcher() {
-        override fun afterTextChanged(editable: Editable) {
-            notifyGreeting.name = editable.toString()
-        }
-    }
+    val onGreetingTextChanged: TextViewBindingAdapter.OnTextChanged = TextViewBindingAdapter.OnTextChanged { s, start, before, count -> notifyGreeting.name = s.toString() }
 
 }

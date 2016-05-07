@@ -1,7 +1,6 @@
 package com.anokmik.databinding.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import com.anokmik.databinding.model.Note;
 
 import java.util.ArrayList;
 
-public class NotesFragment extends Fragment {
+public class NotesFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class NotesFragment extends Fragment {
     private ArrayList<Note> getNotes() {
         String categoryInteresting = getString(R.string.notes_category_interesting);
         String categoryCommon = getString(R.string.notes_category_common);
-        String categoryEasyToUser= getString(R.string.notes_category_easy_to_use);
+        String categoryEasyToUser = getString(R.string.notes_category_easy_to_use);
         ArrayList<Note> notes = new ArrayList<>();
         notes.add(new Note(getString(R.string.note_number_one), categoryInteresting, true));
         notes.add(new Note(getString(R.string.note_number_two), categoryInteresting, true));
