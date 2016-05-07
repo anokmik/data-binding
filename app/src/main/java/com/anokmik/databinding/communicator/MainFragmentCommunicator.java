@@ -33,7 +33,7 @@ public class MainFragmentCommunicator {
         BaseFragment baseFragment = fragmentAndTitle.first;
         String title = fragmentAndTitle.second;
         baseFragment.initArguments(title);
-        listener.replaceFragment(fragmentAndTitle.first);
+        listener.replaceFragment(baseFragment);
     }
 
     private Pair<? extends BaseFragment, String> getFragmentAndTitle(@IdRes int id) {
