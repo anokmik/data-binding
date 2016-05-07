@@ -52,7 +52,7 @@ public class MainFragmentCommunicator {
                 return new Pair<>(new ObservableGreetingFragment(), titles[5]);
             case R.id.notify_greeting:
                 return new Pair<>(new NotifyGreetingFragment(), titles[6]);
-            case R.id.gallery:
+            case R.id.notes:
                 return new Pair<>(new NotesFragment(), titles[7]);
             case R.id.customization:
                 return new Pair<>(new CustomizationFragment(), titles[8]);
