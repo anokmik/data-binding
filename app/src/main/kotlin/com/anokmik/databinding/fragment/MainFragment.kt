@@ -15,9 +15,12 @@ class MainFragment : BaseFragment() {
     private val listener by lazy { castObject<OnFragmentEventListener>(activity) }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater?.inflate(R.layout.fragment_main, container, false)
+        return inflater?.inflate(R.layout.fragment_main, container, false)
+    }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         FragmentMainBinding.bind(view).communicator = MainFragmentCommunicator(resources, listener)
-        return view
     }
 
 }

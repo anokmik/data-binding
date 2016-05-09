@@ -12,9 +12,12 @@ import com.anokmik.databinding.databinding.FragmentLoginBinding
 class LoginFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater?.inflate(R.layout.fragment_login, container, false)
+        return inflater?.inflate(R.layout.fragment_login, container, false)
+    }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         FragmentLoginBinding.bind(view).communicator = LoginFragmentCommunicator(activity.applicationContext)
-        return view
     }
 
 }

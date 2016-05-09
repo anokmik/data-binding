@@ -21,7 +21,7 @@ class ButterKnifeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val user = User.default
+        val user = User.DEFAULT
         firstName.text = user.firstName
         lastName.text = user.lastName
     }

@@ -12,9 +12,12 @@ import com.anokmik.databinding.databinding.FragmentNotifyGreetingBinding
 class NotifyGreetingFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater?.inflate(R.layout.fragment_notify_greeting, container, false)
+        return inflater?.inflate(R.layout.fragment_notify_greeting, container, false)
+    }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         FragmentNotifyGreetingBinding.bind(view).communicator = NotifyGreetingFragmentCommunicator()
-        return view
     }
 
 }
