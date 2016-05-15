@@ -37,10 +37,9 @@ public class MaterialDesignPrimaryPaletteView extends GridLayout implements View
 
     @Override
     public void onClick(View v) {
-        int colorFromView = getColorFromView(v);
-        setColor(colorFromView);
+        color = getColorFromView(v);
         if (listener != null) {
-            listener.onColorChange(this, colorFromView);
+            listener.onColorChange(this, color);
         }
     }
 

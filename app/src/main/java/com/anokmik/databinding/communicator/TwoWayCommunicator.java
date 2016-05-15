@@ -31,7 +31,6 @@ public class TwoWayCommunicator {
     }
 
     public String getEditTextValue() {
-        Log.i(TAG, "getEditTextValue: " + editTextValue);
         return editTextValue;
     }
 
@@ -41,7 +40,6 @@ public class TwoWayCommunicator {
     }
 
     public boolean isCheckBoxValue() {
-        Log.i(TAG, "isCheckBoxValue: " + checkBoxValue);
         return checkBoxValue;
     }
 
@@ -51,7 +49,6 @@ public class TwoWayCommunicator {
     }
 
     public int getCheckedButton() {
-        Log.i(TAG, "getCheckedButton: " + getResourceName(checkedButton));
         return checkedButton;
     }
 
@@ -61,7 +58,6 @@ public class TwoWayCommunicator {
     }
 
     public int getSeekBarProgress() {
-        Log.i(TAG, "getSeekBarProgress: " + seekBarProgress);
         return seekBarProgress;
     }
 
@@ -71,7 +67,6 @@ public class TwoWayCommunicator {
     }
 
     public int getRatingBarValue() {
-        Log.i(TAG, "getRatingBarValue: " + ratingBarValue);
         return ratingBarValue;
     }
 
@@ -81,7 +76,6 @@ public class TwoWayCommunicator {
     }
 
     public int getColor() {
-        Log.i(TAG, "getColor: " + getColorHex());
         return color;
     }
 
