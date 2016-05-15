@@ -11,6 +11,7 @@
     <string name="button_notify_greeting">Notify Greeting</string>
     <string name="button_notes">Notes</string>
     <string name="button_customization">Customization</string>
+    <string name="button_two_way">Two Way</string>
     <string name="button_sign_in">Sign In</string>
 
     <string name="hint_login">Login</string>
@@ -54,5 +55,11 @@
     <string name="customization_two">Me, TextView too</string>
     <string name="customization_three">Third TextView goes here</string>
     <string name="customization_another_color">Maybe another color?</string>
+
+    <string name="two_way_edit_text_hnt">Edit Text Hint</string>
+    <string name="two_way_checkbox_text">Checkbox Text</string>
+    <string name="two_way_radio_button_first">First</string>
+    <string name="two_way_radio_button_second">Second</string>
+    <string name="two_way_radio_button_third">Third</string>
 
 </resources>

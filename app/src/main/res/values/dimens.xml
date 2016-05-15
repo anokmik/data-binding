@@ -2,7 +2,10 @@
 
     <dimen name="layout_padding">16dp</dimen>
     <dimen name="layout_list_top_bottom_margin">2dp</dimen>
+    <dimen name="layout_space">8dp</dimen>
 
     <dimen name="card_elevation">2.0dp</dimen>
+
+    <dimen name="material_palette_item_height">64dp</dimen>
 
 </resources>

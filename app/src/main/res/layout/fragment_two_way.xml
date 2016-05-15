@@ -1,0 +1,101 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.anokmik.databinding.communicator.TwoWayCommunicator" />
+
+        <variable
+            name="communicator"
+            type="TwoWayCommunicator" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="@dimen/layout_padding"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_space" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/two_way_edit_text_hnt"
+                android:inputType="text"
+                android:text="@={communicator.editTextValue}" />
+
+            <include layout="@layout/view_space" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="@={communicator.checkBoxValue}"
+                android:text="@string/two_way_checkbox_text" />
+
+            <include layout="@layout/view_space" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@={communicator.checkedButton}"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_button_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/two_way_radio_button_first" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/two_way_radio_button_second" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_third"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/two_way_radio_button_third" />
+
+            </RadioGroup>
+
+            <include layout="@layout/view_space" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:progress="@={communicator.seekBarProgress}" />
+
+            <include layout="@layout/view_space" />
+
+            <RatingBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rating="@={communicator.ratingBarValue}" />
+
+            <include layout="@layout/view_space" />
+
+            <com.anokmik.databinding.view.MaterialDesignPrimaryPaletteView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:color="@={communicator.color}" />
+
+            <include layout="@layout/view_space" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

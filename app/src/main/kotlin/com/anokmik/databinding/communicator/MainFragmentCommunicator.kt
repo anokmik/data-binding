@@ -30,6 +30,7 @@ class MainFragmentCommunicator(val resources: Resources, val listener: OnFragmen
             R.id.notify_greeting -> Pair(NotifyGreetingFragment(), titles[6])
             R.id.notes -> Pair(NotesFragment(), titles[7])
             R.id.customization -> Pair(CustomizationFragment(), titles[8])
+            R.id.two_way -> Pair(TwoWayFragment(), titles[9])
             else -> throw IllegalArgumentException()
         }
     }
@@ -44,7 +45,8 @@ class MainFragmentCommunicator(val resources: Resources, val listener: OnFragmen
                 resources.getString(R.string.button_observable_greeting),
                 resources.getString(R.string.button_notify_greeting),
                 resources.getString(R.string.button_notes),
-                resources.getString(R.string.button_customization)
+                resources.getString(R.string.button_customization),
+                resources.getString(R.string.button_two_way)
         )
     }
 

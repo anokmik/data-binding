@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- First Row-->
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_red"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_pink"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_purple"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_deep_purple"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_indigo"
+        app:layout_columnWeight="1" />
+
+    <!-- Second Row-->
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_blue"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_light_blue"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_cyan"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_teal"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_green"
+        app:layout_columnWeight="1" />
+
+    <!-- Third Row-->
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_light_green"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_lime"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_yellow"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_amber"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_orange"
+        app:layout_columnWeight="1" />
+
+    <!-- Fourth Row-->
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_deep_orange"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_brown"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_grey"
+        app:layout_columnWeight="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_palette_item_height"
+        android:background="@color/material_primary_blue_grey"
+        app:layout_columnWeight="1" />
+
+</merge>
