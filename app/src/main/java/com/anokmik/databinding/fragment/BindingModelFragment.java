@@ -13,10 +13,13 @@ public class BindingModelFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_binding_model, container, false);
-        FragmentBindingModelBinding binding = FragmentBindingModelBinding.bind(view);
-        binding.setUser(User.getDefault());
-        return view;
+        return inflater.inflate(R.layout.fragment_binding_model, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        FragmentBindingModelBinding.bind(view).setUser(User.getDefault());
     }
 
 }

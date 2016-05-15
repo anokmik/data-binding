@@ -15,6 +15,7 @@ import com.anokmik.databinding.fragment.LoginFragment;
 import com.anokmik.databinding.fragment.NotesFragment;
 import com.anokmik.databinding.fragment.NotifyGreetingFragment;
 import com.anokmik.databinding.fragment.ObservableGreetingFragment;
+import com.anokmik.databinding.fragment.TwoWayFragment;
 import com.anokmik.databinding.listener.OnFragmentEventListener;
 
 public class MainFragmentCommunicator {
@@ -56,13 +57,15 @@ public class MainFragmentCommunicator {
                 return new Pair<>(new NotesFragment(), titles[7]);
             case R.id.customization:
                 return new Pair<>(new CustomizationFragment(), titles[8]);
+            case R.id.two_way:
+                return new Pair<>(new TwoWayFragment(), titles[9]);
             default:
                 throw new IllegalArgumentException();
         }
     }
 
     private String[] getTitles(Resources resources) {
-        String[] titles = new String[9];
+        String[] titles = new String[10];
         titles[0] = resources.getString(R.string.button_find_view_by_id);
         titles[1] = resources.getString(R.string.button_butter_knife);
         titles[2] = resources.getString(R.string.button_data_binding_model);
@@ -72,6 +75,7 @@ public class MainFragmentCommunicator {
         titles[6] = resources.getString(R.string.button_notify_greeting);
         titles[7] = resources.getString(R.string.button_notes);
         titles[8] = resources.getString(R.string.button_customization);
+        titles[9] = resources.getString(R.string.button_two_way);
         return titles;
     }
 

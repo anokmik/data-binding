@@ -13,10 +13,13 @@ public class LoginFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_login, container, false);
-        FragmentLoginBinding binding = FragmentLoginBinding.bind(view);
-        binding.setCommunicator(new LoginFragmentCommunicator(getActivity().getApplicationContext()));
-        return view;
+        return inflater.inflate(R.layout.fragment_login, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        FragmentLoginBinding.bind(view).setCommunicator(new LoginFragmentCommunicator(getActivity().getApplicationContext()));
     }
 
 }

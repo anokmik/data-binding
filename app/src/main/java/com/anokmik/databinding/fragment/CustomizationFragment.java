@@ -13,10 +13,13 @@ public class CustomizationFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_customization, container, false);
-        FragmentCustomizationBinding binding = FragmentCustomizationBinding.bind(view);
-        binding.setCommunicator(new CustomizationFragmentCommunicator());
-        return view;
+        return inflater.inflate(R.layout.fragment_customization, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        FragmentCustomizationBinding.bind(view).setCommunicator(new CustomizationFragmentCommunicator());
     }
 
 }

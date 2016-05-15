@@ -93,6 +93,14 @@
                 android:text="@{communicator.titles[8]}"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/two_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
+                android:text="@{communicator.titles[9]}"
+                android:textAllCaps="false" />
+
         </LinearLayout>
 
     </ScrollView>

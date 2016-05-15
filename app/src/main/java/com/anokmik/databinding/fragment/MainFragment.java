@@ -25,10 +25,13 @@ public class MainFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
-        FragmentMainBinding binding = FragmentMainBinding.bind(view);
-        binding.setCommunicator(new MainFragmentCommunicator(getResources(), listener));
-        return view;
+        return inflater.inflate(R.layout.fragment_main, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        FragmentMainBinding.bind(view).setCommunicator(new MainFragmentCommunicator(getResources(), listener));
     }
 
 }

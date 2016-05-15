@@ -13,10 +13,13 @@ public class ObservableGreetingFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_observable_greeting, container, false);
-        FragmentObservableGreetingBinding binding = FragmentObservableGreetingBinding.bind(view);
-        binding.setCommunicator(new ObservableGreetingFragmentCommunicator());
-        return view;
+        return inflater.inflate(R.layout.fragment_observable_greeting, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        FragmentObservableGreetingBinding.bind(view).setCommunicator(new ObservableGreetingFragmentCommunicator());
     }
 
 }

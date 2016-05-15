@@ -16,10 +16,13 @@ public class NotesFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_notes, container, false);
-        FragmentNotesBinding binding = FragmentNotesBinding.bind(view);
-        binding.setCommunicator(new NotesFragmentCommunicator(getActivity().getApplicationContext(), getNotes()));
-        return view;
+        return inflater.inflate(R.layout.fragment_notes, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        FragmentNotesBinding.bind(view).setCommunicator(new NotesFragmentCommunicator(getActivity().getApplicationContext(), getNotes()));
     }
 
     private ArrayList<Note> getNotes() {

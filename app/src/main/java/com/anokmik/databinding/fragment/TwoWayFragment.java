@@ -6,20 +6,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.anokmik.databinding.R;
-import com.anokmik.databinding.communicator.NotifyGreetingFragmentCommunicator;
-import com.anokmik.databinding.databinding.FragmentNotifyGreetingBinding;
+import com.anokmik.databinding.communicator.TwoWayCommunicator;
+import com.anokmik.databinding.databinding.FragmentTwoWayBinding;
 
-public class NotifyGreetingFragment extends BaseFragment {
+public class TwoWayFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_notify_greeting, container, false);
+        return inflater.inflate(R.layout.fragment_two_way, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        FragmentNotifyGreetingBinding.bind(view).setCommunicator(new NotifyGreetingFragmentCommunicator());
+        FragmentTwoWayBinding.bind(view).setCommunicator(new TwoWayCommunicator(getResources()));
     }
 
 }
