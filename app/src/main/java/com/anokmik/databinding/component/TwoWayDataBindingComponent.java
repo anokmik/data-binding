@@ -1,19 +1,13 @@
 package com.anokmik.databinding.component;
 
 import android.databinding.BindingAdapter;
-import android.databinding.DataBindingComponent;
 import android.databinding.InverseBindingListener;
 
 import com.anokmik.databinding.view.MaterialDesignPrimaryPaletteView;
 
 import static com.anokmik.databinding.view.MaterialDesignPrimaryPaletteView.OnColorChangeListener;
 
-public class TwoWayDataBindingComponent implements DataBindingComponent {
-
-    @Override
-    public TwoWayDataBindingComponent getTwoWayDataBindingComponent() {
-        return this;
-    }
+public class TwoWayDataBindingComponent {
 
     @BindingAdapter(value = {"onColorChange", "colorAttrChanged"}, requireAll = false)
     public void setColorListener(MaterialDesignPrimaryPaletteView view, final OnColorChangeListener listener, final InverseBindingListener colorChange) {

@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
 import com.anokmik.databinding.R;
+import com.anokmik.databinding.component.DataBindingComponentProvider;
 import com.anokmik.databinding.databinding.ActivityMainBinding;
 import com.anokmik.databinding.fragment.MainFragment;
 import com.anokmik.databinding.listener.OnFragmentEventListener;
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity implements OnFragmentEventLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        DataBindingUtil.setDefaultComponent(new DataBindingComponentProvider());
+
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         setSupportActionBar(binding.toolbar);
 

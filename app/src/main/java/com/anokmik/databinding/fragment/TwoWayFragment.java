@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import com.anokmik.databinding.R;
 import com.anokmik.databinding.communicator.TwoWayCommunicator;
-import com.anokmik.databinding.component.TwoWayDataBindingComponent;
 import com.anokmik.databinding.databinding.FragmentTwoWayBinding;
 
 public class TwoWayFragment extends BaseFragment {
@@ -20,7 +19,7 @@ public class TwoWayFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        FragmentTwoWayBinding.bind(view, new TwoWayDataBindingComponent()).setCommunicator(new TwoWayCommunicator(getResources()));
+        FragmentTwoWayBinding.bind(view).setCommunicator(new TwoWayCommunicator(getResources()));
     }
 
 }
