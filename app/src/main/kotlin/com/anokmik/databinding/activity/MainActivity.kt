@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.anokmik.databinding.R
+import com.anokmik.databinding.component.DataBindingComponentProvider
 import com.anokmik.databinding.databinding.ActivityMainBinding
 import com.anokmik.databinding.fragment.MainFragment
 import com.anokmik.databinding.listener.OnFragmentEventListener
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity(), OnFragmentEventListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        DataBindingUtil.setDefaultComponent(DataBindingComponentProvider())
         setSupportActionBar(binding.toolbar)
         supportFragmentManager.add(getMainFragment(), binding.container.id)
     }

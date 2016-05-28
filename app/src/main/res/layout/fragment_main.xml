@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -28,7 +29,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[0]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
+
+            <include layout="@layout/view_space" />
 
             <Button
                 android:id="@+id/butter_knife"
@@ -36,7 +42,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[1]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
+
+            <include layout="@layout/view_space" />
 
             <Button
                 android:id="@+id/data_binding_model"
@@ -44,7 +55,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[2]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
+
+            <include layout="@layout/view_space" />
 
             <Button
                 android:id="@+id/data_binding_ids"
@@ -52,7 +68,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[3]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
+
+            <include layout="@layout/view_space" />
 
             <Button
                 android:id="@+id/login"
@@ -60,7 +81,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[4]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
+
+            <include layout="@layout/view_space" />
 
             <Button
                 android:id="@+id/observable_greeting"
@@ -68,7 +94,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[5]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
+
+            <include layout="@layout/view_space" />
 
             <Button
                 android:id="@+id/notify_greeting"
@@ -76,7 +107,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[6]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
+
+            <include layout="@layout/view_space" />
 
             <Button
                 android:id="@+id/notes"
@@ -84,7 +120,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[7]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
+
+            <include layout="@layout/view_space" />
 
             <Button
                 android:id="@+id/customization"
@@ -92,7 +133,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[8]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
+
+            <include layout="@layout/view_space" />
 
             <Button
                 android:id="@+id/two_way"
@@ -100,7 +146,10 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> communicator.replaceFragment(v.id)}"
                 android:text="@{communicator.titles[9]}"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                bind:defaultColor="@{@color/colorPrimary}"
+                bind:pressedColor="@{@color/colorAccent}" />
 
         </LinearLayout>
 
